@@ -8,10 +8,6 @@
 
     <style>
 
-        /* =========================
-           RESET
-        ========================= */
-
         * {
             margin: 0;
             padding: 0;
@@ -37,7 +33,6 @@
         section {
             scroll-margin-top: 90px;
         }
-
 
         /* =========================
            NAVBAR
@@ -382,258 +377,1267 @@
             margin-top: 15px;
         }
 
-
-        /* =========================
-           DETAIL TOKOH
-        ========================= */
-
-        .detail-section {
-            border-top: 1px solid #191919;
-        }
-
-        .detail {
-            max-width: 850px;
-        }
-
-        .back-button {
-            display: inline-block;
-
-            color: #999;
-
-            padding: 9px 0;
-
-            margin-bottom: 25px;
-        }
-
-        .back-button:hover {
-            color: #e63946;
-        }
-
-        .detail-number {
-            color: #68151a;
-
-            font-size: 80px;
-            font-weight: bold;
-
-            line-height: 0.9;
-        }
-
-        .detail h2 {
-            font-size: clamp(38px, 7vw, 68px);
-
-            line-height: 1;
-
-            margin: 12px 0 8px;
-        }
-
-        .detail-position {
-            color: #e63946;
-
-            margin-bottom: 30px;
-        }
-
-        .detail-box {
-            background: #121212;
-
-            border: 1px solid #292929;
-
-            border-radius: 16px;
-
-            padding: 27px;
-
-            margin-bottom: 16px;
-        }
-
-        .detail-box h3 {
-            color: #e63946;
-
-            margin-bottom: 8px;
-        }
-
-        .detail-box p {
-            color: #999;
-        }
-
-
-        /* =========================
-           KRONOLOGI
-        ========================= */
-
-        .timeline {
-            max-width: 850px;
-
-            margin-top: 45px;
-        }
-
-        .timeline-item {
-            position: relative;
-
-            border-left: 2px solid #5f161b;
-
-            padding:
-                0 0 45px 32px;
-        }
-
-        .timeline-item:last-child {
-            border-left-color: transparent;
-        }
-
-        .timeline-item::before {
-            content: "";
-
-            position: absolute;
-
-            left: -7px;
-            top: 0;
-
-            width: 12px;
-            height: 12px;
-
-            background: #d71920;
-
-            border-radius: 50%;
-        }
-
-        .timeline-date {
-            color: #e63946;
-
-            font-size: 12px;
-            font-weight: bold;
-
-            letter-spacing: 1px;
-        }
-
-        .timeline-item h3 {
-            margin: 6px 0 8px;
-        }
-
-        .timeline-item p {
-            color: #999;
-        }
-
-
-        /* =========================
-           DAMPAK
-        ========================= */
-
-        .impact-grid {
-            display: grid;
-
-            grid-template-columns: repeat(2, 1fr);
-
-            gap: 18px;
-
-            margin-top: 45px;
-        }
-
-        .impact-card {
-            background: #121212;
-
-            border: 1px solid #292929;
-
-            border-radius: 18px;
-
-            padding: 28px;
-        }
-
-        .impact-card h3 {
-            color: #e63946;
-
-            margin-bottom: 8px;
-        }
-
-        .impact-card p {
-            color: #999;
-        }
-
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            text-align: center;
-
-            background: #050505;
-
-            border-top: 1px solid #222;
-
-            padding: 45px 20px;
-        }
-
-        footer h3 {
-            letter-spacing: 2px;
-        }
-
-        footer span {
-            color: #d71920;
-        }
-
-        footer p {
-            color: #666;
-
-            font-size: 13px;
-        }
-
-
-        /* =========================
-           RESPONSIVE HP
-        ========================= */
-
-        @media (max-width: 800px) {
-
-            .navbar {
-                flex-direction: column;
-                gap: 12px;
-
-                padding: 14px 3%;
-            }
-
-            .nav-menu {
-                width: 100%;
-
-                overflow-x: auto;
-
-                justify-content: flex-start;
-
-                padding-bottom: 3px;
-            }
-
-            .nav-menu a {
-                flex: 0 0 auto;
-
-                font-size: 12px;
-
-                padding: 9px 11px;
-            }
-
-            .container {
-                width: 90%;
-            }
-
-            .section {
-                padding: 70px 0;
-            }
-
-            .about-grid,
-            .selection-grid,
-            .tokoh-grid,
-            .impact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-title {
-                letter-spacing: -4px;
-            }
-
-            .hero-description {
-                font-size: 16px;
-            }
-
-            .detail-number {
-                font-size: 60px;
-            }
-        }
-
     </style>
 </head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================= -->
+
+    <header class="navbar">
+
+        <a href="#beranda" class="logo">
+            SEJARAH<span>.</span>
+        </a>
+
+        <nav class="nav-menu">
+
+            <a href="#beranda">
+                Beranda
+            </a>
+
+            <a href="#g30s">
+                G30S/PKI
+            </a>
+
+            <a href="#tokoh">
+                Tokoh
+            </a>
+
+            <a href="#kronologi">
+                Kronologi
+            </a>
+
+            <a href="#dampak">
+                Dampak
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         BERANDA
+    ========================= -->
+
+    <main>
+
+        <section id="beranda">
+
+            <div class="container">
+
+                <div class="hero">
+
+                    <div class="hero-small">
+                        SEJARAH INDONESIA • 1965
+                    </div>
+
+                    <h1 class="hero-title">
+                        G30S<span>/</span>PKI
+                    </h1>
+
+                    <p class="hero-description">
+
+                        Mengenal salah satu peristiwa penting
+                        dalam sejarah Indonesia melalui latar
+                        belakang, tokoh, kronologi, dan dampaknya.
+
+                    </p>
+
+                    <a href="#g30s" class="hero-button">
+                        Mulai Menjelajah →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             G30S/PKI
+        ========================= -->
+
+        <section id="g30s">
+
+            <div class="container">
+
+                <div class="section">
+
+                    <div class="eyebrow">
+                        01 — TENTANG
+                    </div>
+
+                    <h2 class="section-title">
+                        G30S/PKI
+                    </h2>
+
+                    <p class="section-description">
+
+                        Peristiwa politik dan militer yang
+                        berlangsung pada akhir September hingga
+                        awal Oktober 1965 dan membawa perubahan
+                        besar dalam sejarah Indonesia.
+
+                    </p>
+
+
+                    <div class="about-grid">
+
+                        <article class="about-card">
+
+                            <p>
+                                Gerakan 30 September atau G30S
+                                merupakan istilah yang digunakan
+                                untuk menyebut gerakan yang
+                                berlangsung pada malam 30 September
+                                hingga 1 Oktober 1965.
+                            </p>
+
+                            <p>
+                                Dalam rangkaian peristiwa tersebut,
+                                sejumlah perwira Angkatan Darat
+                                menjadi korban penculikan dan
+                                pembunuhan.
+                            </p>
+
+                            <p>
+                                Peristiwa ini kemudian diikuti
+                                perubahan besar dalam kehidupan
+                                politik, sosial, dan pemerintahan
+                                Indonesia.
+                            </p>
+
+                        </article>
+
+
+                        <article class="about-card about-warning">
+
+                            <h3>
+                                Catatan Sejarah
+                            </h3>
+
+                            <p>
+                                Pembahasan mengenai pihak-pihak
+                                yang bertanggung jawab atas G30S
+                                menjadi bagian dari perdebatan
+                                historiografi. Karena itu, sejarah
+                                peristiwa ini perlu dipelajari
+                                secara kritis melalui berbagai
+                                sumber.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+
+                    <div class="selection-header">
+
+                        <div class="eyebrow">
+                            LATAR BELAKANG
+                        </div>
+
+                        <h2 class="section-title">
+                            Kondisi Indonesia
+                        </h2>
+
+                    </div>
+
+
+                    <div class="selection-grid">
+
+                        <article class="selection-card">
+
+                            <div class="selection-number">
+                                01
+                            </div>
+
+                            <h3>
+                                Ketegangan Politik
+                            </h3>
+
+                            <p>
+                                Persaingan politik antara berbagai
+                                kelompok semakin kuat pada masa
+                                Demokrasi Terpimpin.
+                            </p>
+
+                        </article>
+
+
+                        <article class="selection-card">
+
+                            <div class="selection-number">
+                                02
+                            </div>
+
+                            <h3>
+                                Konflik Ideologi
+                            </h3>
+
+                            <p>
+                                Perbedaan pandangan mengenai
+                                ideologi dan arah politik negara
+                                menyebabkan ketegangan.
+                            </p>
+
+                        </article>
+
+
+                        <article class="selection-card">
+
+                            <div class="selection-number">
+                                03
+                            </div>
+
+                            <h3>
+                                Kondisi Ekonomi
+                            </h3>
+
+                            <p>
+                                Indonesia juga menghadapi berbagai
+                                persoalan ekonomi dan sosial pada
+                                masa tersebut.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             TOKOH
+        ========================= -->
+
+        <section id="tokoh" class="tokoh-section">
+
+            <div class="container">
+
+                <div class="section">
+
+                    <div class="eyebrow">
+                        02 — TOKOH
+                    </div>
+
+                    <h2 class="section-title">
+                        6 Jenderal & 1 Perwira
+                    </h2>
+
+                    <p class="section-description">
+
+                        Tekan salah satu kartu untuk membuka
+                        informasi mengenai tokoh.
+
+                    </p>
+
+
+                    <div class="tokoh-grid">
+
+
+                        <!-- TOKOH 1 -->
+
+                        <a href="#ahmad-yani" class="tokoh-card">
+
+                            <div class="tokoh-label">
+                                TOKOH 01
+                            </div>
+
+                            <h3>
+                                Ahmad Yani
+                            </h3>
+
+                            <p>
+                                Menteri/Panglima Angkatan Darat
+                            </p>
+
+                            <span class="tokoh-link">
+                                Lihat informasi →
+                            </span>
+
+                        </a> 
+
+                        <!-- TOKOH 2 -->
+
+                        <a href="#r-suprapto" class="tokoh-card">
+
+                            <div class="tokoh-label">
+                                TOKOH 02
+                            </div>
+
+                            <h3>
+                                R. Suprapto
+                            </h3>
+
+                            <p>
+                                Deputi II Menteri/Panglima Angkatan Darat
+                            </p>
+
+                            <span class="tokoh-link">
+                                Lihat informasi →
+                            </span>
+
+                        </a>
+
+
+                        <!-- TOKOH 3 -->
+
+                        <a href="#m-t-haryono" class="tokoh-card">
+
+                            <div class="tokoh-label">
+                                TOKOH 03
+                            </div>
+
+                            <h3>
+                                M. T. Haryono
+                            </h3>
+
+                            <p>
+                                Deputi III Menteri/Panglima Angkatan Darat
+                            </p>
+
+                            <span class="tokoh-link">
+                                Lihat informasi →
+                            </span>
+
+                        </a>
+
+
+                        <!-- TOKOH 4 -->
+
+                        <a href="#d-i-pandjaitan" class="tokoh-card">
+
+                            <div class="tokoh-label">
+                                TOKOH 04
+                            </div>
+
+                            <h3>
+                                D. I. Pandjaitan
+                            </h3>
+
+                            <p>
+                                Asisten IV Menteri/Panglima Angkatan Darat
+                            </p>
+
+                            <span class="tokoh-link">
+                                Lihat informasi →
+                            </span>
+
+                        </a>
+
+
+                        <!-- TOKOH 5 -->
+
+                        <a href="#sutoyo" class="tokoh-card">
+
+                            <div class="tokoh-label">
+                                TOKOH 05
+                            </div>
+
+                            <h3>
+                                Sutoyo Siswomiharjo
+                            </h3>
+
+                            <p>
+                                Inspektur Kehakiman Angkatan Darat
+                            </p>
+
+                            <span class="tokoh-link">
+                                Lihat informasi →
+                            </span>
+
+                        </a>
+
+
+                        <!-- TOKOH 6 -->
+
+                        <a href="#s-parman" class="tokoh-card">
+
+                            <div class="tokoh-label">
+                                TOKOH 06
+                            </div>
+
+                            <h3>
+                                S. Parman
+                            </h3>
+
+                            <p>
+                                Asisten I Menteri/Panglima Angkatan Darat
+                            </p>
+
+                            <span class="tokoh-link">
+                                Lihat informasi →
+                            </span>
+
+                        </a>
+
+
+                        <!-- TOKOH 7 -->
+
+                        <a href="#pierre-tendean" class="tokoh-card">
+
+                            <div class="tokoh-label">
+                                TOKOH 07
+                            </div>
+
+                            <h3>
+                                Pierre Tendean
+                            </h3>
+
+                            <p>
+                                Ajudan Jenderal A. H. Nasution
+                            </p>
+
+                            <span class="tokoh-link">
+                                Lihat informasi →
+                            </span>
+
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             DETAIL TOKOH 1
+        ========================= -->
+
+        <section id="ahmad-yani" class="detail-section">
+
+            <div class="container">
+
+                <div class="section detail">
+
+                    <a href="#tokoh" class="back-button">
+                        ← Kembali ke Tokoh
+                    </a>
+
+                    <div class="detail-number">
+                        01
+                    </div>
+
+                    <h2>
+                        Ahmad Yani
+                    </h2>
+
+                    <div class="detail-position">
+                        Menteri/Panglima Angkatan Darat
+                    </div>
+
+                    <div class="detail-box">
+
+                        <h3>
+                            Profil
+                        </h3>
+
+                        <p>
+                            Ahmad Yani merupakan salah satu tokoh
+                            penting dalam Angkatan Darat Indonesia
+                            dan menjabat sebagai Menteri/Panglima
+                            Angkatan Darat pada tahun 1965.
+                        </p>
+
+                    </div>
+
+
+                    <div class="detail-box">
+
+                        <h3>
+                            Peran dalam Peristiwa
+                        </h3>
+
+                        <p>
+                            Ahmad Yani menjadi salah satu perwira
+                            tinggi Angkatan Darat yang menjadi
+                            korban dalam rangkaian peristiwa
+                            30 September 1965.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             DETAIL TOKOH 2
+        ========================= -->
+
+        <section id="r-suprapto" class="detail-section">
+
+            <div class="container">
+
+                <div class="section detail">
+
+                    <a href="#tokoh" class="back-button">
+                        ← Kembali ke Tokoh
+                    </a>
+
+                    <div class="detail-number">
+                        02
+                    </div>
+
+                    <h2>
+                        R. Suprapto
+                    </h2>
+
+                    <div class="detail-position">
+                        Deputi II Menteri/Panglima Angkatan Darat
+                    </div>
+
+                    <div class="detail-box">
+
+                        <h3>
+                            Profil
+                        </h3>
+
+                        <p>
+                            R. Suprapto merupakan perwira tinggi
+                            Angkatan Darat yang memiliki pengalaman
+                            dalam bidang militer dan pemerintahan.
+                        </p>
+
+                    </div>
+
+
+                    <div class="detail-box">
+
+                        <h3>
+                            Peran dalam Peristiwa
+                        </h3>
+
+                        <p>
+                            R. Suprapto menjadi salah satu perwira
+                            Angkatan Darat yang menjadi korban
+                            dalam peristiwa G30S pada tahun 1965.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             DETAIL TOKOH 3
+        ========================= -->
+
+        <section id="m-t-haryono" class="detail-section">
+
+            <div class="container">
+
+                <div class="section detail">
+
+                    <a href="#tokoh" class="back-button">
+                        ← Kembali ke Tokoh
+                    </a>
+
+                    <div class="detail-number">
+                        03
+                    </div>
+
+                    <h2>
+                        M. T. Haryono
+                    </h2>
+
+                    <div class="detail-position">
+                        Deputi III Menteri/Panglima Angkatan Darat
+                    </div>
+
+                    <div class="detail-box">
+
+                        <h3>
+                            Profil
+                        </h3>
+
+                        <p>
+                            M. T. Haryono merupakan perwira tinggi
+                            Angkatan Darat yang pernah terlibat
+                            dalam berbagai tugas penting dalam
+                            perjalanan militer Indonesia.
+                        </p>
+
+                    </div>
+
+
+                    <div class="detail-box">
+
+                        <h3>
+                            Peran dalam Peristiwa
+                        </h3>
+
+                        <p>
+                            M. T. Haryono menjadi salah satu
+                            perwira tinggi yang menjadi korban
+                            dalam rangkaian peristiwa G30S.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+             DETAIL TOKOH 4
+        ========================= -->
+
+        <section id="d-i-pandjaitan" class="detail-section">
+
+            <div class="container">
+
+                <div class="section detail">
+
+                    <a href="#tokoh" class="back-button">
+                        ← Kembali ke Tokoh
+                    </a>
+
+                    <div class="detail-number">
+                        04
+                    </div>
+
+                    <h2>
+                        D. I. Pandjaitan
+                    </h2>
+
+                    <div class="detail-position">
+                        Asisten IV Menteri/Panglima Angkatan Darat
+                    </div>
+
+                    <div class="detail-box">
+
+                        <h3>
+                            Profil
+                        </h3>
+
+                        <p>
+                            D. I. Pandjaitan merupakan perwira tinggi
+                            Angkatan Darat yang dikenal memiliki
+                            pengalaman dalam perjuangan dan tugas
+                            militer Indonesia.
+                        </p>
+
+                    </div>
+
+
+                    <div class="detail-box">
+
+                        <h3>
+                            Peran dalam Peristiwa
+                        </h3>
+
+                        <p>
+                            D. I. Pandjaitan menjadi salah satu
+                            perwira yang menjadi korban dalam
+                            peristiwa G30S tahun 1965.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             DETAIL TOKOH 5
+        ========================= -->
+
+        <section id="sutoyo" class="detail-section">
+
+            <div class="container">
+
+                <div class="section detail">
+
+                    <a href="#tokoh" class="back-button">
+                        ← Kembali ke Tokoh
+                    </a>
+
+                    <div class="detail-number">
+                        05
+                    </div>
+
+                    <h2>
+                        Sutoyo Siswomiharjo
+                    </h2>
+
+                    <div class="detail-position">
+                        Inspektur Kehakiman Angkatan Darat
+                    </div>
+
+                    <div class="detail-box">
+
+                        <h3>
+                            Profil
+                        </h3>
+
+                        <p>
+                            Sutoyo Siswomiharjo merupakan perwira
+                            Angkatan Darat yang bertugas dalam bidang
+                            kehakiman militer.
+                        </p>
+
+                    </div>
+
+
+                    <div class="detail-box">
+
+                        <h3>
+                            Peran dalam Peristiwa
+                        </h3>
+
+                        <p>
+                            Sutoyo menjadi salah satu perwira
+                            yang menjadi korban dalam rangkaian
+                            peristiwa G30S.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             DETAIL TOKOH 6
+        ========================= -->
+
+        <section id="s-parman" class="detail-section">
+
+            <div class="container">
+
+                <div class="section detail">
+
+                    <a href="#tokoh" class="back-button">
+                        ← Kembali ke Tokoh
+                    </a>
+
+                    <div class="detail-number">
+                        06
+                    </div>
+
+                    <h2>
+                        S. Parman
+                    </h2>
+
+                    <div class="detail-position">
+                        Asisten I Menteri/Panglima Angkatan Darat
+                    </div>
+
+                    <div class="detail-box">
+
+                        <h3>
+                            Profil
+                        </h3>
+
+                        <p>
+                            S. Parman merupakan perwira tinggi
+                            Angkatan Darat yang memiliki pengalaman
+                            dalam bidang intelijen dan militer.
+                        </p>
+
+                    </div>
+
+
+                    <div class="detail-box">
+
+                        <h3>
+                            Peran dalam Peristiwa
+                        </h3>
+
+                        <p>
+                            S. Parman menjadi salah satu perwira
+                            yang menjadi korban dalam peristiwa
+                            G30S tahun 1965.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+             DETAIL TOKOH 7
+        ========================= -->
+
+        <section id="pierre-tendean" class="detail-section">
+
+            <div class="container">
+
+                <div class="section detail">
+
+                    <a href="#tokoh" class="back-button">
+                        ← Kembali ke Tokoh
+                    </a>
+
+                    <div class="detail-number">
+                        07
+                    </div>
+
+                    <h2>
+                        Pierre Tendean
+                    </h2>
+
+                    <div class="detail-position">
+                        Ajudan Jenderal A. H. Nasution
+                    </div>
+
+                    <div class="detail-box">
+
+                        <h3>
+                            Profil
+                        </h3>
+
+                        <p>
+                            Pierre Tendean merupakan perwira muda
+                            Angkatan Darat yang bertugas sebagai
+                            ajudan Jenderal A. H. Nasution.
+                        </p>
+
+                    </div>
+
+
+                    <div class="detail-box">
+
+                        <h3>
+                            Peran dalam Peristiwa
+                        </h3>
+
+                        <p>
+                            Pierre Tendean menjadi salah satu korban
+                            dalam rangkaian peristiwa G30S setelah
+                            disangka sebagai Jenderal A. H. Nasution.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             KRONOLOGI
+        ========================= -->
+
+        <section id="kronologi">
+
+            <div class="container">
+
+                <div class="section">
+
+                    <div class="eyebrow">
+                        03 — KRONOLOGI
+                    </div>
+
+                    <h2 class="section-title">
+                        Rangkaian Peristiwa
+                    </h2>
+
+                    <p class="section-description">
+
+                        Gambaran singkat mengenai rangkaian
+                        peristiwa pada akhir September hingga
+                        awal Oktober 1965.
+
+                    </p>
+
+
+                    <div class="timeline">
+
+
+                        <!-- KRONOLOGI 1 -->
+
+                        <div class="timeline-item">
+
+                            <div class="timeline-date">
+                                30 SEPTEMBER 1965
+                            </div>
+
+                            <h3>
+                                Gerakan Dimulai
+                            </h3>
+
+                            <p>
+                                Gerakan yang kemudian dikenal
+                                sebagai G30S mulai berlangsung
+                                pada malam hari.
+                            </p>
+
+                        </div>
+
+
+                        <!-- KRONOLOGI 2 -->
+
+                        <div class="timeline-item">
+
+                            <div class="timeline-date">
+                                1 OKTOBER 1965
+                            </div>
+
+                            <h3>
+                                Penculikan Perwira
+                            </h3>
+
+                            <p>
+                                Sejumlah perwira tinggi Angkatan
+                                Darat menjadi korban penculikan
+                                dalam rangkaian peristiwa tersebut.
+                            </p>
+
+                        </div>
+
+
+                        <!-- KRONOLOGI 3 -->
+
+                        <div class="timeline-item">
+
+                            <div class="timeline-date">
+                                1 OKTOBER 1965
+                            </div>
+
+                            <h3>
+                                Pengambilalihan RRI
+                            </h3>
+
+                            <p>
+                                Kelompok G30S menguasai beberapa
+                                lokasi strategis di Jakarta,
+                                termasuk Radio Republik Indonesia.
+                            </p>
+
+                        </div>
+
+
+                        <!-- KRONOLOGI 4 -->
+
+                        <div class="timeline-item">
+
+                            <div class="timeline-date">
+                                1 OKTOBER 1965
+                            </div>
+
+                            <h3>
+                                Operasi Pemulihan
+                            </h3>
+
+                            <p>
+                                Pasukan yang dipimpin Mayor Jenderal
+                                Soeharto mengambil langkah untuk
+                                mengendalikan kembali keadaan.
+                            </p>
+
+                        </div>
+
+
+                        <!-- KRONOLOGI 5 -->
+
+                        <div class="timeline-item">
+
+                            <div class="timeline-date">
+                                AWAL OKTOBER 1965
+                            </div>
+
+                            <h3>
+                                Penemuan Korban
+                            </h3>
+
+                            <p>
+                                Para korban yang sebelumnya
+                                diculik kemudian ditemukan di
+                                kawasan Lubang Buaya.
+                            </p>
+
+                        </div>
+
+
+                        <!-- KRONOLOGI 6 -->
+
+                        <div class="timeline-item">
+
+                            <div class="timeline-date">
+                                SETELAH OKTOBER 1965
+                            </div>
+
+                            <h3>
+                                Perubahan Politik
+                            </h3>
+
+                            <p>
+                                Peristiwa tersebut diikuti perubahan
+                                besar dalam kehidupan politik,
+                                pemerintahan, dan masyarakat Indonesia.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+             DETAIL TOKOH 7
+        ========================= -->
+
+        <section id="pierre-tendean" class="detail-section">
+
+            <div class="container">
+
+                <div class="section detail">
+
+                    <a href="#tokoh" class="back-button">
+                        ← Kembali ke Tokoh
+                    </a>
+
+                    <div class="detail-number">
+                        07
+                    </div>
+
+                    <h2>
+                        Pierre Tendean
+                    </h2>
+
+                    <div class="detail-position">
+                        Ajudan Jenderal A. H. Nasution
+                    </div>
+
+                    <div class="detail-box">
+
+                        <h3>
+                            Profil
+                        </h3>
+
+                        <p>
+                            Pierre Tendean merupakan perwira muda
+                            Angkatan Darat yang bertugas sebagai
+                            ajudan Jenderal A. H. Nasution.
+                        </p>
+
+                    </div>
+
+
+                    <div class="detail-box">
+
+                        <h3>
+                            Peran dalam Peristiwa
+                        </h3>
+
+                        <p>
+                            Pierre Tendean menjadi salah satu korban
+                            dalam rangkaian peristiwa G30S setelah
+                            disangka sebagai Jenderal A. H. Nasution.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             KRONOLOGI
+        ========================= -->
+
+        <section id="kronologi">
+
+            <div class="container">
+
+                <div class="section">
+
+                    <div class="eyebrow">
+                        03 — KRONOLOGI
+                    </div>
+
+                    <h2 class="section-title">
+                        Rangkaian Peristiwa
+                    </h2>
+
+                    <p class="section-description">
+
+                        Gambaran singkat mengenai rangkaian
+                        peristiwa pada akhir September hingga
+                        awal Oktober 1965.
+
+                    </p>
+
+
+                    <div class="timeline">
+
+
+                        <!-- KRONOLOGI 1 -->
+
+                        <div class="timeline-item">
+
+                            <div class="timeline-date">
+                                30 SEPTEMBER 1965
+                            </div>
+
+                            <h3>
+                                Gerakan Dimulai
+                            </h3>
+
+                            <p>
+                                Gerakan yang kemudian dikenal
+                                sebagai G30S mulai berlangsung
+                                pada malam hari.
+                            </p>
+
+                        </div>
+
+
+                        <!-- KRONOLOGI 2 -->
+
+                        <div class="timeline-item">
+
+                            <div class="timeline-date">
+                                1 OKTOBER 1965
+                            </div>
+
+                            <h3>
+                                Penculikan Perwira
+                            </h3>
+
+                            <p>
+                                Sejumlah perwira tinggi Angkatan
+                                Darat menjadi korban penculikan
+                                dalam rangkaian peristiwa tersebut.
+                            </p>
+
+                        </div>
+
+
+                        <!-- KRONOLOGI 3 -->
+
+                        <div class="timeline-item">
+
+                            <div class="timeline-date">
+                                1 OKTOBER 1965
+                            </div>
+
+                            <h3>
+                                Pengambilalihan RRI
+                            </h3>
+
+                            <p>
+                                Kelompok G30S menguasai beberapa
+                                lokasi strategis di Jakarta,
+                                termasuk Radio Republik Indonesia.
+                            </p>
+
+                        </div>
+
+
+                        <!-- KRONOLOGI 4 -->
+
+                        <div class="timeline-item">
+
+                            <div class="timeline-date">
+                                1 OKTOBER 1965
+                            </div>
+
+                            <h3>
+                                Operasi Pemulihan
+                            </h3>
+
+                            <p>
+                                Pasukan yang dipimpin Mayor Jenderal
+                                Soeharto mengambil langkah untuk
+                                mengendalikan kembali keadaan.
+                            </p>
+
+                        </div>
+
+
+                        <!-- KRONOLOGI 5 -->
+
+                        <div class="timeline-item">
+
+                            <div class="timeline-date">
+                                AWAL OKTOBER 1965
+                            </div>
+
+                            <h3>
+                                Penemuan Korban
+                            </h3>
+
+                            <p>
+                                Para korban yang sebelumnya
+                                diculik kemudian ditemukan di
+                                kawasan Lubang Buaya.
+                            </p>
+
+                        </div>
+
+
+                        <!-- KRONOLOGI 6 -->
+
+                        <div class="timeline-item">
+
+                            <div class="timeline-date">
+                                SETELAH OKTOBER 1965
+                            </div>
+
+                            <h3>
+                                Perubahan Politik
+                            </h3>
+
+                            <p>
+                                Peristiwa tersebut diikuti perubahan
+                                besar dalam kehidupan politik,
+                                pemerintahan, dan masyarakat Indonesia.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+    </section>
