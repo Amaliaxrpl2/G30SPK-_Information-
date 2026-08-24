@@ -24,13 +24,14 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #090909;
+            background: #080808;
             color: #ffffff;
-            line-height: 1.7;
+            line-height: 1.6;
         }
 
         a {
-            -webkit-tap-highlight-color: transparent;
+            text-decoration: none;
+            color: inherit;
         }
 
         section {
@@ -42,82 +43,64 @@
            NAVBAR
         ========================= */
 
-        nav {
+        .navbar {
             position: sticky;
             top: 0;
-            z-index: 1000;
+            z-index: 999;
 
-            width: 100%;
+            background: rgba(8, 8, 8, 0.96);
+            border-bottom: 1px solid #222;
+
+            padding: 18px 7%;
 
             display: flex;
             align-items: center;
             justify-content: space-between;
-
-            padding: 18px 6%;
-
-            background: rgba(10, 10, 10, 0.97);
-
-            border-bottom: 1px solid #292929;
         }
 
         .logo {
-            color: #ffffff;
-            text-decoration: none;
-
-            font-size: 21px;
+            font-size: 22px;
             font-weight: bold;
-
             letter-spacing: 2px;
-
-            white-space: nowrap;
         }
 
         .logo span {
             color: #d71920;
         }
 
-        .menu {
+        .nav-menu {
             display: flex;
-            align-items: center;
-            justify-content: center;
-
-            gap: 5px;
+            gap: 8px;
         }
 
-        .menu a {
-            display: inline-block;
-
-            color: #aaaaaa;
-            text-decoration: none;
-
-            padding: 10px 13px;
-
-            border-radius: 8px;
-
+        .nav-menu a {
+            color: #999;
             font-size: 14px;
+
+            padding: 9px 13px;
+            border-radius: 7px;
 
             transition: 0.25s;
         }
 
-        .menu a:hover {
-            color: #ffffff;
-            background: #1d1d1d;
+        .nav-menu a:hover {
+            color: white;
+            background: #1b1b1b;
         }
 
-        .menu a:active {
+        .nav-menu a:active {
             background: #c1121f;
-            color: #ffffff;
+            color: white;
         }
 
 
         /* =========================
-           CONTAINER
+           UMUM
         ========================= */
 
         .container {
-            width: 88%;
+            width: 86%;
             max-width: 1100px;
-
             margin: auto;
         }
 
@@ -125,35 +108,31 @@
             padding: 100px 0;
         }
 
-        .label {
+        .eyebrow {
             color: #e63946;
 
             font-size: 12px;
             font-weight: bold;
 
             letter-spacing: 3px;
+            text-transform: uppercase;
         }
 
-        .title {
-            font-size: clamp(42px, 7vw, 75px);
-
+        .section-title {
+            font-size: clamp(40px, 7vw, 75px);
             line-height: 1;
 
-            margin-top: 12px;
-            margin-bottom: 20px;
+            margin: 12px 0 20px;
         }
 
-        .description {
+        .section-description {
+            color: #999;
             max-width: 700px;
-
-            color: #999999;
-
-            font-size: 16px;
         }
 
 
         /* =========================
-           BERANDA
+           HERO
         ========================= */
 
         #beranda {
@@ -165,67 +144,63 @@
             background:
                 radial-gradient(
                     circle at 80% 35%,
-                    rgba(160, 0, 0, 0.35),
+                    rgba(180, 0, 0, 0.35),
                     transparent 35%
                 ),
-                #090909;
+                #080808;
         }
 
         .hero {
-            max-width: 850px;
+            max-width: 900px;
         }
 
-        .badge {
+        .hero-small {
             display: inline-block;
+
+            color: #e63946;
+
+            border: 1px solid #6d151b;
+            border-radius: 50px;
 
             padding: 7px 15px;
 
-            border: 1px solid #76151b;
-
-            border-radius: 50px;
-
-            color: #ff7272;
-
-            font-size: 12px;
-
+            font-size: 11px;
             letter-spacing: 2px;
 
             margin-bottom: 25px;
         }
 
         .hero-title {
-            font-size: clamp(65px, 13vw, 145px);
+            font-size: clamp(70px, 14vw, 150px);
 
-            line-height: 0.85;
+            line-height: 0.82;
 
-            letter-spacing: -7px;
+            letter-spacing: -8px;
 
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
 
         .hero-title span {
             color: #d71920;
         }
 
-        .hero-text {
+        .hero-description {
             max-width: 680px;
 
-            color: #aaaaaa;
+            color: #aaa;
 
             font-size: 18px;
 
             margin-bottom: 30px;
         }
 
-        .button {
+        .hero-button {
             display: inline-block;
 
             background: #c1121f;
-            color: #ffffff;
+            color: white;
 
-            text-decoration: none;
-
-            padding: 14px 24px;
+            padding: 15px 25px;
 
             border-radius: 8px;
 
@@ -234,10 +209,9 @@
             transition: 0.25s;
         }
 
-        .button:hover {
+        .hero-button:hover {
             background: #e63946;
-
-            transform: translateY(-2px);
+            transform: translateY(-3px);
         }
 
 
@@ -247,41 +221,38 @@
 
         .about-grid {
             display: grid;
-
-            grid-template-columns: 1.3fr 0.7fr;
+            grid-template-columns: 1.4fr 0.6fr;
 
             gap: 20px;
 
             margin-top: 45px;
         }
 
-        .box {
-            background: #141414;
+        .about-card {
+            background: #121212;
 
             border: 1px solid #292929;
 
-            border-radius: 16px;
+            border-radius: 18px;
 
             padding: 30px;
         }
 
-        .box p {
-            color: #aaaaaa;
-
+        .about-card p {
+            color: #999;
             margin-bottom: 15px;
         }
 
-        .box p:last-child {
+        .about-card p:last-child {
             margin-bottom: 0;
         }
 
-        .warning {
-            border-left: 4px solid #c1121f;
+        .about-warning {
+            border-top: 3px solid #c1121f;
         }
 
-        .warning h3 {
+        .about-warning h3 {
             color: #e63946;
-
             margin-bottom: 10px;
         }
 
@@ -290,50 +261,49 @@
            LATAR BELAKANG
         ========================= */
 
-        .cards {
-            display: grid;
+        .selection-header {
+            margin-top: 75px;
+        }
 
-            grid-template-columns:
-                repeat(3, 1fr);
+        .selection-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
 
             gap: 18px;
 
             margin-top: 40px;
         }
 
-        .card {
-            background: #141414;
+        .selection-card {
+            background: #121212;
 
             border: 1px solid #292929;
 
-            border-radius: 16px;
+            border-radius: 18px;
 
             padding: 28px;
 
             transition: 0.25s;
         }
 
-        .card:hover {
+        .selection-card:hover {
             transform: translateY(-5px);
-
-            border-color: #a51d1d;
+            border-color: #9d1b22;
         }
 
-        .number {
-            color: #7b1717;
+        .selection-number {
+            color: #71151a;
 
             font-size: 42px;
-
             font-weight: bold;
         }
 
-        .card h3 {
-            margin: 7px 0 10px;
+        .selection-card h3 {
+            margin: 5px 0 10px;
         }
 
-        .card p {
-            color: #999999;
-
+        .selection-card p {
+            color: #888;
             font-size: 14px;
         }
 
@@ -342,11 +312,14 @@
            TOKOH
         ========================= */
 
+        .tokoh-section {
+            background: #0b0b0b;
+        }
+
         .tokoh-grid {
             display: grid;
 
-            grid-template-columns:
-                repeat(2, 1fr);
+            grid-template-columns: repeat(2, 1fr);
 
             gap: 18px;
 
@@ -356,14 +329,11 @@
         .tokoh-card {
             display: block;
 
-            color: #ffffff;
-            text-decoration: none;
-
-            background: #141414;
+            background: #121212;
 
             border: 1px solid #292929;
 
-            border-radius: 16px;
+            border-radius: 18px;
 
             padding: 28px;
 
@@ -373,49 +343,43 @@
         .tokoh-card:hover {
             transform: translateY(-5px);
 
-            background: #181818;
-
             border-color: #c1121f;
+
+            background: #161616;
         }
 
         .tokoh-card:active {
             transform: scale(0.98);
-
-            border-color: #e63946;
         }
 
-        .tokoh-number {
-            color: #a51d1d;
+        .tokoh-label {
+            color: #e63946;
 
-            font-size: 12px;
-
+            font-size: 11px;
             font-weight: bold;
 
             letter-spacing: 2px;
         }
 
         .tokoh-card h3 {
-            font-size: 23px;
-
-            margin: 6px 0;
+            font-size: 24px;
+            margin: 7px 0;
         }
 
         .tokoh-card p {
-            color: #888888;
-
+            color: #888;
             font-size: 14px;
         }
 
-        .lihat {
+        .tokoh-link {
             display: block;
 
             color: #e63946;
 
             font-size: 13px;
-
             font-weight: bold;
 
-            margin-top: 13px;
+            margin-top: 15px;
         }
 
 
@@ -423,36 +387,35 @@
            DETAIL TOKOH
         ========================= */
 
+        .detail-section {
+            border-top: 1px solid #191919;
+        }
+
         .detail {
             max-width: 850px;
-
-            margin: auto;
         }
 
-        .back {
+        .back-button {
             display: inline-block;
 
-            color: #aaaaaa;
+            color: #999;
 
-            text-decoration: none;
+            padding: 9px 0;
 
-            margin-bottom: 30px;
-
-            padding: 8px 0;
+            margin-bottom: 25px;
         }
 
-        .back:hover {
+        .back-button:hover {
             color: #e63946;
         }
 
         .detail-number {
-            color: #641414;
+            color: #68151a;
 
             font-size: 80px;
-
             font-weight: bold;
 
-            line-height: 1;
+            line-height: 0.9;
         }
 
         .detail h2 {
@@ -460,25 +423,25 @@
 
             line-height: 1;
 
-            margin: 10px 0;
+            margin: 12px 0 8px;
         }
 
-        .position {
+        .detail-position {
             color: #e63946;
 
             margin-bottom: 30px;
         }
 
         .detail-box {
-            background: #141414;
+            background: #121212;
 
             border: 1px solid #292929;
 
             border-radius: 16px;
 
-            padding: 28px;
+            padding: 27px;
 
-            margin-bottom: 18px;
+            margin-bottom: 16px;
         }
 
         .detail-box h3 {
@@ -488,7 +451,7 @@
         }
 
         .detail-box p {
-            color: #aaaaaa;
+            color: #999;
         }
 
 
@@ -499,16 +462,16 @@
         .timeline {
             max-width: 850px;
 
-            margin-top: 50px;
+            margin-top: 45px;
         }
 
         .timeline-item {
             position: relative;
 
-            padding:
-                0 0 45px 35px;
+            border-left: 2px solid #5f161b;
 
-            border-left: 2px solid #681818;
+            padding:
+                0 0 45px 32px;
         }
 
         .timeline-item:last-child {
@@ -531,22 +494,21 @@
             border-radius: 50%;
         }
 
-        .date {
+        .timeline-date {
             color: #e63946;
 
             font-size: 12px;
-
             font-weight: bold;
 
             letter-spacing: 1px;
         }
 
         .timeline-item h3 {
-            margin: 5px 0 8px;
+            margin: 6px 0 8px;
         }
 
         .timeline-item p {
-            color: #999999;
+            color: #999;
         }
 
 
@@ -557,32 +519,31 @@
         .impact-grid {
             display: grid;
 
-            grid-template-columns:
-                repeat(2, 1fr);
+            grid-template-columns: repeat(2, 1fr);
 
             gap: 18px;
 
             margin-top: 45px;
         }
 
-        .impact {
-            background: #141414;
+        .impact-card {
+            background: #121212;
 
             border: 1px solid #292929;
 
-            border-radius: 16px;
+            border-radius: 18px;
 
             padding: 28px;
         }
 
-        .impact h3 {
+        .impact-card h3 {
             color: #e63946;
 
             margin-bottom: 8px;
         }
 
-        .impact p {
-            color: #999999;
+        .impact-card p {
+            color: #999;
         }
 
 
@@ -593,19 +554,23 @@
         footer {
             text-align: center;
 
-            padding: 45px 20px;
-
             background: #050505;
 
-            border-top: 1px solid #222222;
+            border-top: 1px solid #222;
+
+            padding: 45px 20px;
         }
 
         footer h3 {
-            margin-bottom: 5px;
+            letter-spacing: 2px;
+        }
+
+        footer span {
+            color: #d71920;
         }
 
         footer p {
-            color: #666666;
+            color: #666;
 
             font-size: 13px;
         }
@@ -617,22 +582,15 @@
 
         @media (max-width: 800px) {
 
-            nav {
+            .navbar {
                 flex-direction: column;
-
-                gap: 10px;
+                gap: 12px;
 
                 padding: 14px 3%;
             }
 
-            .logo {
-                font-size: 20px;
-            }
-
-            .menu {
+            .nav-menu {
                 width: 100%;
-
-                display: flex;
 
                 overflow-x: auto;
 
@@ -641,7 +599,7 @@
                 padding-bottom: 3px;
             }
 
-            .menu a {
+            .nav-menu a {
                 flex: 0 0 auto;
 
                 font-size: 12px;
@@ -658,7 +616,7 @@
             }
 
             .about-grid,
-            .cards,
+            .selection-grid,
             .tokoh-grid,
             .impact-grid {
                 grid-template-columns: 1fr;
@@ -668,364 +626,14 @@
                 letter-spacing: -4px;
             }
 
-            .hero-text {
+            .hero-description {
                 font-size: 16px;
             }
 
             .detail-number {
                 font-size: 60px;
             }
-
         }
 
     </style>
 </head>
-
-
-<body>
-
-
-    <!-- ==================================================
-         NAVBAR
-    ================================================== -->
-
-    <nav>
-
-        <a href="index.html#beranda" class="logo">
-            SEJARAH<span>.</span>
-        </a>
-
-        <div class="menu">
-
-            <a href="index.html#beranda">
-                Beranda
-            </a>
-
-            <a href="index.html#g30s">
-                G30S/PKI
-            </a>
-
-            <a href="index.html#tokoh">
-                Tokoh
-            </a>
-
-            <a href="index.html#kronologi">
-                Kronologi
-            </a>
-
-            <a href="index.html#dampak">
-                Dampak
-            </a>
-
-        </div>
-
-    </nav>
-
-
-    <!-- ==================================================
-         1. BERANDA
-    ================================================== -->
-
-    <section id="beranda">
-
-        <div class="container">
-
-            <div class="hero">
-
-                <div class="badge">
-                    SEJARAH INDONESIA • 1965
-                </div>
-
-                <h1 class="hero-title">
-                    G30S<span>/</span>PKI
-                </h1>
-
-                <p class="hero-text">
-
-                    Mengenal salah satu peristiwa penting
-                    dalam sejarah Indonesia melalui latar
-                    belakang, tokoh, kronologi, dan dampaknya.
-
-                </p>
-
-                <a href="index.html#g30s" class="button">
-                    Mulai Menjelajah →
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ==================================================
-         2. G30S/PKI
-    ================================================== -->
-
-    <section id="g30s">
-
-        <div class="container">
-
-            <div class="section">
-
-                <span class="label">
-                    01 — TENTANG
-                </span>
-
-                <h1 class="title">
-                    G30S/PKI
-                </h1>
-
-                <p class="description">
-
-                    Peristiwa politik dan militer yang terjadi
-                    pada akhir September hingga awal Oktober 1965.
-
-                </p>
-
-
-                <div class="about-grid">
-
-
-                    <div class="box">
-
-                        <p>
-
-                            G30S merupakan istilah yang digunakan
-                            untuk menyebut gerakan yang berlangsung
-                            pada malam 30 September hingga
-                            1 Oktober 1965.
-
-                        </p>
-
-                        <p>
-
-                            Dalam peristiwa tersebut, sejumlah
-                            perwira Angkatan Darat menjadi korban
-                            penculikan dan pembunuhan.
-
-                        </p>
-
-                        <p>
-
-                            Peristiwa ini kemudian diikuti oleh
-                            perubahan besar dalam kehidupan politik
-                            dan sosial Indonesia.
-
-                        </p>
-
-                    </div>
-
-
-                    <div class="box warning">
-
-                        <h3>
-                            CATATAN SEJARAH
-                        </h3>
-
-                        <p>
-
-                            Keterlibatan PKI dan pihak-pihak lain
-                            dalam G30S merupakan bagian yang masih
-                            menjadi perdebatan dalam historiografi.
-                            Karena itu, peristiwa ini sebaiknya
-                            dipelajari melalui berbagai sumber sejarah.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <!-- LATAR BELAKANG -->
-
-                <div style="margin-top: 75px;">
-
-                    <span class="label">
-                        LATAR BELAKANG
-                    </span>
-
-                    <h2 class="title">
-                        Kondisi Indonesia
-                    </h2>
-
-                </div>
-
-
-                <div class="cards">
-
-
-                    <div class="card">
-
-                        <div class="number">
-                            01
-                        </div>
-
-                        <h3>
-                            Ketegangan Politik
-                        </h3>
-
-                        <p>
-
-                            Persaingan politik antara berbagai
-                            kelompok semakin kuat pada masa
-                            Demokrasi Terpimpin.
-
-                        </p>
-
-                    </div>
-
-
-                    <div class="card">
-
-                        <div class="number">
-                            02
-                        </div>
-
-                        <h3>
-                            Konflik Ideologi
-                        </h3>
-
-                        <p>
-
-                            Perbedaan pandangan mengenai ideologi
-                            dan arah politik negara menimbulkan
-                            ketegangan.
-
-                        </p>
-
-                    </div>
-
-
-                    <div class="card">
-
-                        <div class="number">
-                            03
-                        </div>
-
-                        <h3>
-                            Kondisi Ekonomi
-                        </h3>
-
-                        <p>
-
-                            Indonesia menghadapi berbagai
-                            persoalan ekonomi pada masa tersebut.
-
-                        </p>
-
-                    </div>
-
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ==================================================
-         3. TOKOH
-    ================================================== -->
-
-    <section id="tokoh">
-
-        <div class="container">
-
-            <div class="section">
-
-                <span class="label">
-                    02 — TOKOH
-                </span>
-
-                <h1 class="title">
-                    6 Jenderal & 1 Perwira
-                </h1>
-
-                <p class="description">
-
-                    Tekan salah satu kartu untuk melihat
-                    informasi mengenai tokoh tersebut.
-
-                </p>
-
-
-                <div class="tokoh-grid">
-
-
-                    <!-- AHMAD YANI -->
-
-                    <a href="index.html#yani" class="tokoh-card">
-
-                        <span class="tokoh-number">
-                            TOKOH 01
-                        </span>
-
-                        <h3>
-                            Ahmad Yani
-                        </h3>
-
-                        <p>
-                            Menteri/Panglima Angkatan Darat
-                        </p>
-
-                        <span class="lihat">
-                            Lihat detail →
-                        </span>
-
-                    </a>
-
-
-                    <!-- R. SUPRAPTO -->
-
-                    <a href="index.html#suprapto" class="tokoh-card">
-
-                        <span class="tokoh-number">
-                            TOKOH 02
-                        </span>
-
-                        <h3>
-                            R. Suprapto
-                        </h3>
-
-                        <p>
-                            Deputi II Menteri/Panglima Angkatan Darat
-                        </p>
-
-                        <span class="lihat">
-                            Lihat detail →
-                        </span>
-
-                    </a>
-
-
-                    <!-- M.T. HARYONO -->
-
-                    <a href="index.html#haryono" class="tokoh-card">
-
-                        <span class="tokoh-number">
-                            TOKOH 03
-                        </span>
-
-                        <h3>
-                            M.T. Haryono
-                        </h3>
-
-                        <p>
-                            Deputi III Menteri/Panglima Angkatan Darat
-                        </p>
-
-                        <span class="lihat">
-                            Lihat detail →
-                        </span>
-
-                    </a>
-
-
-                    <!-- S. PARMAN -->
-
-                    <a href="index.html#parman
