@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dampak G30S/PKI | Sejarah Indonesia</title>
+
+<style>
+
+/* =========================
+   DASAR
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f0e8;
+    color:#3d342b;
+    line-height:1.7;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:88%;
+    max-width:1100px;
+    margin:auto;
+}
+
+.section{
+    padding:75px 0;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:999;
+
+    background:#fffaf2;
+
+    border-bottom:1px solid #d8cbb9;
+
+    box-shadow:
+    0 4px 15px rgba(60,45,30,.08);
+
+    padding:15px 6%;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:20px;
+}
+
+.logo{
+    font-size:21px;
+    font-weight:bold;
+
+    letter-spacing:2px;
+
+    color:#4a3b2b;
+
+    white-space:nowrap;
+}
+
+.logo span{
+    color:#9a7447;
+}
+
+.nav-menu{
+    display:flex;
+    gap:5px;
+
+    overflow-x:auto;
+}
+
+.nav-menu a{
+    color:#766b5e;
+
+    font-size:14px;
+
+    padding:9px 13px;
+
+    border-radius:8px;
+
+    white-space:nowrap;
+
+    transition:.25s;
+}
+
+.nav-menu a:hover{
+    background:#eee4d5;
+    color:#4b3d2f;
+}
+
+.nav-menu a.active{
+    background:#eee4d5;
+
+    color:#765836;
+
+    font-weight:bold;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.hero{
+    padding:90px 0 80px;
+
+    background:
+
+    radial-gradient(
+        circle at 85% 25%,
+        rgba(154,116,71,.18),
+        transparent 32%
+    ),
+
+    linear-gradient(
+        135deg,
+        #fffaf2,
+        #eee5d8
+    );
+}
+
+.eyebrow{
+    color:#987346;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    letter-spacing:3px;
+}
+
+.hero h1{
+    color:#40352b;
+
+    font-size:
+    clamp(48px,8vw,82px);
+
+    line-height:1;
+
+    margin:15px 0 18px;
+}
+
+.hero p{
+    color:#70675e;
+
+    max-width:720px;
+
+    font-size:17px;
+}
+
+
+/* =========================
+   DAMPAK
+========================= */
+
+.impact-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:20px;
+
+    margin-top:15px;
+}
+
+.impact-card{
+    background:#fffaf2;
+
+    border:
+    1px solid #d8c9b5;
+
+    border-radius:17px;
+
+    padding:30px;
+
+    box-shadow:
+    0 5px 18px
+    rgba(70,50,30,.06);
+
+    transition:.25s;
+}
+
+.impact-card:hover{
+    transform:translateY(-5px);
+
+    border-color:#a98962;
+
+    box-shadow:
+    0 10px 25px
+    rgba(70,50,30,.1);
+}
+
+.impact-number{
+    color:#b49a78;
+
+    font-size:40px;
+
+    font-weight:bold;
+
+    margin-bottom:5px;
+}
+
+.impact-card h2{
+    color:#483b2e;
+
+    font-size:23px;
+
+    margin-bottom:9px;
+}
+
+.impact-card p{
+    color:#70675e;
+
+    font-size:14px;
+}
+
+
+/* =========================
+   DAMPAK UTAMA
+========================= */
+
+.highlight{
+    margin-top:25px;
+
+    background:#e9dfd0;
+
+    border:
+    1px solid #d4c3ad;
+
+    border-radius:18px;
+
+    padding:32px;
+
+    box-shadow:
+    0 5px 18px
+    rgba(70,50,30,.05);
+}
+
+.highlight h2{
+    color:#765836;
+
+    margin-bottom:10px;
+}
+
+.highlight p{
+    color:#70675e;
+}
+
+
+/* =========================
+   NAVIGASI
+========================= */
+
+.navigation{
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+    margin-top:50px;
+}
+
+.button{
+    display:inline-block;
+
+    background:#947047;
+
+    color:white;
+
+    padding:13px 20px;
+
+    border-radius:9px;
+
+    font-weight:bold;
+
+    transition:.25s;
+}
+
+.button:hover{
+    background:#765634;
+
+    transform:translateY(-3px);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#3d3126;
+
+    color:#fffaf2;
+
+    text-align:center;
+
+    padding:40px 20px;
+}
+
+.footer-title{
+    font-size:22px;
+
+    font-weight:bold;
+
+    letter-spacing:2px;
+}
+
+.footer-title span{
+    color:#c9a878;
+}
+
+.footer-text{
+    color:#cfc4b5;
+
+    font-size:12px;
+
+    margin-top:6px;
+}
+
+
+/* =========================
+   HP
+========================= */
+
+@media(max-width:700px){
+
+    .navbar{
+        flex-direction:column;
+
+        padding:13px 4%;
+
+        gap:10px;
+    }
+
+    .nav-menu{
+        width:100%;
+    }
+
+    .container{
+        width:90%;
+    }
+
+    .hero{
+        padding:65px 0;
+    }
+
+    .section{
+        padding:55px 0;
+    }
+
+    .impact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .navigation{
+        flex-direction:column;
+    }
+
+    .button{
+        text-align:center;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header class="navbar">
+
+<a href="index.html" class="logo">
+SEJARAH<span>.</span>
+</a>
+
+
+<nav class="nav-menu">
+
+<a href="index.html">
+Beranda
+</a>
+
+<a href="index.html#g30s">
+G30S/PKI
+</a>
+
+<a href="tokoh.html">
+Tokoh
+</a>
+
+<a href="kronologi.html">
+Kronologi
+</a>
+
+<a href="dampak.html" class="active">
+Dampak
+</a>
+
+</nav>
+
+</header>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="eyebrow">
+04 — DAMPAK
+</div>
+
+<h1>
+Dampak G30S
+</h1>
+
+<p>
+
+Peristiwa G30S membawa perubahan besar
+dalam kehidupan politik, sosial, militer,
+dan pemerintahan Indonesia.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     ISI DAMPAK
+========================= -->
+
+<main>
+
+<div class="container">
+
+<div class="section">
+
+
+<div class="impact-grid">
+
+
+<!-- DAMPAK 01 -->
+
+<article class="impact-card">
+
+<div class="impact-number">
+01
+</div>
+
+<h2>
+Perubahan Politik
+</h2>
+
+<p>
+
+Peristiwa G30S menyebabkan perubahan besar
+dalam konstelasi politik Indonesia.
+Kekuatan politik yang sebelumnya memiliki
+pengaruh besar mengalami perubahan posisi
+dalam kehidupan politik nasional.
+
+</p>
+
+</article>
+
+
+<!-- DAMPAK 02 -->
+
+<article class="impact-card">
+
+<div class="impact-number">
+02
+</div>
+
+<h2>
+Melemahnya PKI
+</h2>
+
+<p>
+
+Setelah peristiwa G30S, Partai Komunis
+Indonesia (PKI) mengalami tekanan yang
+semakin besar. Aktivitas dan keberadaan
+organisasi tersebut kemudian dilarang
+oleh pemerintah.
+
+</p>
+
+</article>
+
+
+<!-- DAMPAK 03 -->
+
+<article class="impact-card">
+
+<div class="impact-number">
+03
+</div>
+
+<h2>
+Perubahan Kekuasaan
+</h2>
+
+<p>
+
+Terjadi perubahan keseimbangan kekuasaan
+antara Presiden Soekarno dan kekuatan
+militer. Situasi tersebut menjadi bagian
+dari proses politik yang kemudian membawa
+perubahan kepemimpinan nasional.
+
+</p>
+
+</article>
+
+
+<!-- DAMPAK 04 -->
+
+<article class="impact-card">
+
+<div class="impact-number">
+04
+</div>
+
+<h2>
+Peran Militer Meningkat
+</h2>
+
+<p>
+
+Setelah peristiwa tersebut, peran Angkatan
+Darat dalam kehidupan politik Indonesia
+semakin kuat. Militer menjadi salah satu
+kekuatan penting dalam perkembangan politik
+pada masa berikutnya.
+
+</p>
+
+</article>
+
+
+<!-- DAMPAK 05 -->
+
+<article class="impact-card">
+
+<div class="impact-number">
+05
+</div>
+
+<h2>
+Dampak Sosial
+</h2>
+
+<p>
+
+Masyarakat Indonesia mengalami ketegangan
+dan konflik sosial yang berkaitan dengan
+situasi politik setelah G30S. Berbagai
+kelompok masyarakat terdampak oleh
+perubahan keadaan tersebut.
+
+</p>
+
+</article>
+
+
+<!-- DAMPAK 06 -->
+
+<article class="impact-card">
+
+<div class="impact-number">
+06
+</div>
+
+<h2>
+Perubahan Pemerintahan
+</h2>
+
+<p>
+
+Rangkaian peristiwa setelah G30S menjadi
+bagian dari proses yang akhirnya mengubah
+arah pemerintahan Indonesia dan membuka
+jalan menuju masa Orde Baru.
+
+</p>
+
+</article>
+
+
+</div>
+
+
+<!-- =========================
+     KESIMPULAN
+========================= -->
+
+<div class="highlight">
+
+<h2>
+Kesimpulan
+</h2>
+
+<p>
+
+G30S merupakan peristiwa yang memiliki
+dampak luas terhadap perjalanan sejarah
+Indonesia. Dampaknya tidak hanya terlihat
+dalam bidang politik dan pemerintahan,
+tetapi juga memengaruhi kehidupan sosial
+masyarakat serta hubungan antara kekuatan
+sipil dan militer.
+
+</p>
+
+</div>
+
+
+<!-- =========================
+     NAVIGASI
+========================= -->
+
+<div class="navigation">
+
+<a href="kronologi.html" class="button">
+← Kembali ke Kronologi
+</a>
+
+<a href="index.html" class="button">
+Kembali ke Beranda →
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<div class="footer-title">
+G30S<span>/</span>PKI
+</div>
+
+<div class="footer-text">
+Sejarah Indonesia • 1965
+</div>
+
+</footer>
+
+
+</body>
+
+  </html>
