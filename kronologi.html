@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kronologi G30S/PKI | Sejarah Indonesia</title>
+
+<style>
+
+/* =========================
+   DASAR
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f0e8;
+    color:#3d342b;
+    line-height:1.7;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:88%;
+    max-width:1000px;
+    margin:auto;
+}
+
+.section{
+    padding:70px 0;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:999;
+
+    background:#fffaf2;
+    border-bottom:1px solid #d8cbb9;
+
+    box-shadow:0 4px 15px rgba(60,45,30,.08);
+
+    padding:15px 6%;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:20px;
+}
+
+.logo{
+    font-size:21px;
+    font-weight:bold;
+    letter-spacing:2px;
+
+    color:#4a3b2b;
+
+    white-space:nowrap;
+}
+
+.logo span{
+    color:#9a7447;
+}
+
+.nav-menu{
+    display:flex;
+    gap:5px;
+    overflow-x:auto;
+}
+
+.nav-menu a{
+    color:#766b5e;
+
+    font-size:14px;
+
+    padding:9px 13px;
+
+    border-radius:8px;
+
+    white-space:nowrap;
+
+    transition:.25s;
+}
+
+.nav-menu a:hover{
+    background:#eee4d5;
+    color:#4b3d2f;
+}
+
+.nav-menu a.active{
+    background:#eee4d5;
+    color:#765836;
+    font-weight:bold;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.hero{
+    padding:90px 0 80px;
+
+    background:
+
+    radial-gradient(
+        circle at 85% 25%,
+        rgba(154,116,71,.18),
+        transparent 32%
+    ),
+
+    linear-gradient(
+        135deg,
+        #fffaf2,
+        #eee5d8
+    );
+}
+
+.eyebrow{
+    color:#987346;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    letter-spacing:3px;
+}
+
+.hero h1{
+    color:#40352b;
+
+    font-size:
+    clamp(48px,8vw,82px);
+
+    line-height:1;
+
+    margin:15px 0 18px;
+}
+
+.hero p{
+    color:#70675e;
+
+    max-width:700px;
+
+    font-size:17px;
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline{
+    max-width:850px;
+
+    margin:10px auto 0;
+}
+
+.timeline-item{
+    position:relative;
+
+    padding:
+    0 0 45px 42px;
+
+    border-left:
+    2px solid #c2ad90;
+}
+
+.timeline-item:last-child{
+    border-left-color:transparent;
+    padding-bottom:0;
+}
+
+.timeline-item::before{
+    content:"";
+
+    position:absolute;
+
+    left:-8px;
+    top:0;
+
+    width:14px;
+    height:14px;
+
+    border-radius:50%;
+
+    background:#947047;
+
+    border:3px solid #f5f0e8;
+}
+
+.timeline-date{
+    display:inline-block;
+
+    color:#947047;
+
+    background:#eee4d5;
+
+    border:1px solid #d5c2a7;
+
+    border-radius:20px;
+
+    padding:5px 12px;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    margin-bottom:10px;
+}
+
+.timeline-card{
+    background:#fffaf2;
+
+    border:1px solid #d8c9b5;
+
+    border-radius:17px;
+
+    padding:25px 28px;
+
+    box-shadow:
+    0 5px 18px rgba(70,50,30,.06);
+
+    transition:.25s;
+}
+
+.timeline-card:hover{
+    transform:translateY(-3px);
+
+    border-color:#a98962;
+
+    box-shadow:
+    0 9px 22px rgba(70,50,30,.1);
+}
+
+.timeline-card h2{
+    color:#483b2e;
+
+    font-size:22px;
+
+    margin-bottom:8px;
+}
+
+.timeline-card p{
+    color:#70675e;
+}
+
+
+/* =========================
+   CATATAN
+========================= */
+
+.note{
+    margin-top:50px;
+
+    background:#eee4d5;
+
+    border-left:
+    4px solid #947047;
+
+    border-radius:12px;
+
+    padding:22px 25px;
+}
+
+.note h3{
+    color:#765836;
+
+    margin-bottom:6px;
+}
+
+.note p{
+    color:#70675e;
+
+    font-size:14px;
+}
+
+
+/* =========================
+   NAVIGASI
+========================= */
+
+.navigation{
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+    margin-top:50px;
+}
+
+.button{
+    display:inline-block;
+
+    background:#947047;
+
+    color:white;
+
+    padding:13px 20px;
+
+    border-radius:9px;
+
+    font-weight:bold;
+
+    transition:.25s;
+}
+
+.button:hover{
+    background:#765634;
+
+    transform:translateY(-3px);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#3d3126;
+
+    color:#fffaf2;
+
+    text-align:center;
+
+    padding:40px 20px;
+}
+
+.footer-title{
+    font-size:22px;
+
+    font-weight:bold;
+
+    letter-spacing:2px;
+}
+
+.footer-title span{
+    color:#c9a878;
+}
+
+.footer-text{
+    color:#cfc4b5;
+
+    font-size:12px;
+
+    margin-top:6px;
+}
+
+
+/* =========================
+   RESPONSIVE HP
+========================= */
+
+@media(max-width:700px){
+
+    .navbar{
+        flex-direction:column;
+
+        padding:13px 4%;
+
+        gap:10px;
+    }
+
+    .nav-menu{
+        width:100%;
+    }
+
+    .container{
+        width:90%;
+    }
+
+    .hero{
+        padding:65px 0;
+    }
+
+    .section{
+        padding:55px 0;
+    }
+
+    .timeline-item{
+        padding-left:28px;
+    }
+
+    .timeline-card{
+        padding:21px;
+    }
+
+    .navigation{
+        flex-direction:column;
+    }
+
+    .button{
+        text-align:center;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header class="navbar">
+
+<a href="index.html" class="logo">
+SEJARAH<span>.</span>
+</a>
+
+<nav class="nav-menu">
+
+<a href="index.html">
+Beranda
+</a>
+
+<a href="index.html#g30s">
+G30S/PKI
+</a>
+
+<a href="tokoh.html">
+Tokoh
+</a>
+
+<a href="kronologi.html" class="active">
+Kronologi
+</a>
+
+<a href="dampak.html">
+Dampak
+</a>
+
+</nav>
+
+</header>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="eyebrow">
+03 — KRONOLOGI
+</div>
+
+<h1>
+Kronologi G30S
+</h1>
+
+<p>
+
+Rangkaian peristiwa yang terjadi pada
+akhir September hingga awal Oktober 1965
+dan menjadi salah satu titik penting dalam
+sejarah politik Indonesia.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     KRONOLOGI
+========================= -->
+
+<main>
+
+<div class="container">
+
+<div class="section">
+
+<div class="timeline">
+
+
+<!-- 30 SEPTEMBER -->
+
+<div class="timeline-item">
+
+<div class="timeline-date">
+30 SEPTEMBER 1965
+</div>
+
+<div class="timeline-card">
+
+<h2>
+Awal Gerakan
+</h2>
+
+<p>
+
+Pada malam 30 September 1965, terjadi
+pergerakan pasukan yang kemudian dikenal
+dalam sejarah sebagai Gerakan 30 September.
+Peristiwa tersebut berlangsung di tengah
+situasi politik Indonesia yang sedang
+mengalami ketegangan.
+
+</p>
+
+</div>
+
+</div>
+
+
+<!-- 1 OKTOBER DINI HARI -->
+
+<div class="timeline-item">
+
+<div class="timeline-date">
+1 OKTOBER 1965 • DINI HARI
+</div>
+
+<div class="timeline-card">
+
+<h2>
+Penculikan Sejumlah Perwira
+</h2>
+
+<p>
+
+Pada dini hari 1 Oktober, sejumlah perwira
+tinggi Angkatan Darat menjadi sasaran
+penculikan. Beberapa di antaranya kemudian
+menjadi korban dalam rangkaian peristiwa
+tersebut.
+
+</p>
+
+</div>
+
+</div>
+
+
+<!-- RADIO -->
+
+<div class="timeline-item">
+
+<div class="timeline-date">
+1 OKTOBER 1965
+</div>
+
+<div class="timeline-card">
+
+<h2>
+Pengumuman Melalui Radio
+</h2>
+
+<p>
+
+Gerakan tersebut mengumumkan pembentukan
+Dewan Revolusi melalui siaran radio.
+Pengumuman tersebut menjadi salah satu
+peristiwa penting pada pagi 1 Oktober 1965.
+
+</p>
+
+</div>
+
+</div>
+
+
+<!-- SOEHARTO -->
+
+<div class="timeline-item">
+
+<div class="timeline-date">
+1 OKTOBER 1965
+</div>
+
+<div class="timeline-card">
+
+<h2>
+Tindakan Angkatan Darat
+</h2>
+
+<p>
+
+Mayor Jenderal Soeharto yang saat itu
+menjabat sebagai Panglima Kostrad mengambil
+langkah untuk mengendalikan keadaan.
+Pasukan yang berada di sekitar Jakarta
+kemudian diarahkan untuk menguasai kembali
+tempat-tempat strategis.
+
+</p>
+
+</div>
+
+</div>
+
+
+<!-- RRI -->
+
+<div class="timeline-item">
+
+<div class="timeline-date">
+1 OKTOBER 1965 • SIANG
+</div>
+
+<div class="timeline-card">
+
+<h2>
+Penguasaan Kembali RRI
+</h2>
+
+<p>
+
+Pusat Radio Republik Indonesia (RRI)
+berhasil dikuasai kembali oleh pasukan
+yang berada di bawah kendali Angkatan Darat.
+Setelah itu, siaran radio digunakan untuk
+menyampaikan perkembangan keadaan kepada
+masyarakat.
+
+</p>
+
+</div>
+
+</div>
+
+
+<!-- HALIM -->
+
+<div class="timeline-item">
+
+<div class="timeline-date">
+1 OKTOBER 1965
+</div>
+
+<div class="timeline-card">
+
+<h2>
+Penguasaan Pangkalan Udara Halim
+</h2>
+
+<p>
+
+Pasukan yang terlibat dalam gerakan kemudian
+meninggalkan beberapa posisi strategis.
+Pangkalan Udara Halim Perdanakusuma menjadi
+salah satu lokasi penting dalam rangkaian
+peristiwa tersebut.
+
+</p>
+
+</div>
+
+</div>
+
+
+<!-- 2 OKTOBER -->
+
+<div class="timeline-item">
+
+<div class="timeline-date">
+2 OKTOBER 1965
+</div>
+
+<div class="timeline-card">
+
+<h2>
+Situasi Mulai Dikendalikan
+</h2>
+
+<p>
+
+Pada 2 Oktober, keadaan di Jakarta semakin
+berada di bawah kendali Angkatan Darat.
+Pemerintah dan militer kemudian melakukan
+berbagai langkah untuk menangani keadaan
+setelah peristiwa 1 Oktober.
+
+</p>
+
+</div>
+
+</div>
+
+
+<!-- PASCA PERISTIWA -->
+
+<div class="timeline-item">
+
+<div class="timeline-date">
+SETELAH OKTOBER 1965
+</div>
+
+<div class="timeline-card">
+
+<h2>
+Perubahan Politik
+</h2>
+
+<p>
+
+Peristiwa G30S kemudian diikuti perubahan
+besar dalam kehidupan politik Indonesia.
+Posisi politik Partai Komunis Indonesia
+(PKI) semakin terdesak dan terjadi
+perubahan keseimbangan kekuasaan dalam
+pemerintahan.
+
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<!-- =========================
+     CATATAN
+========================= -->
+
+<div class="note">
+
+<h3>
+Catatan Sejarah
+</h3>
+
+<p>
+
+Kronologi di atas merupakan ringkasan
+untuk keperluan pembelajaran. Penafsiran
+mengenai G30S dan pihak-pihak yang terlibat
+memiliki perbedaan dalam berbagai sumber
+sejarah. Karena itu, pembelajaran sebaiknya
+menggunakan beberapa sumber yang kredibel.
+
+</p>
+
+</div>
+
+
+<!-- =========================
+     NAVIGASI
+========================= -->
+
+<div class="navigation">
+
+<a href="tokoh.html" class="button">
+← Kembali ke Tokoh
+</a>
+
+<a href="dampak.html" class="button">
+Lanjut ke Dampak →
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<div class="footer-title">
+G30S<span>/</span>PKI
+</div>
+
+<div class="footer-text">
+Sejarah Indonesia • 1965
+</div>
+
+</footer>
+
+
+</body>
+
+</html>
