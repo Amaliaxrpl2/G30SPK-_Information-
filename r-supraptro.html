@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>R. Suprapto | G30S/PKI</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f0e8;
+    color:#3d342b;
+    line-height:1.7;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+
+/* NAVBAR */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:999;
+
+    background:#fffaf2;
+
+    border-bottom:1px solid #d8cbb9;
+
+    box-shadow:0 4px 15px rgba(60,45,30,.08);
+
+    padding:15px 6%;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:20px;
+}
+
+.logo{
+    font-size:21px;
+    font-weight:bold;
+    letter-spacing:2px;
+
+    color:#4a3b2b;
+    white-space:nowrap;
+}
+
+.logo span{
+    color:#9a7447;
+}
+
+.nav-menu{
+    display:flex;
+    gap:5px;
+    overflow-x:auto;
+}
+
+.nav-menu a{
+    color:#766b5e;
+    font-size:14px;
+
+    padding:9px 13px;
+
+    border-radius:8px;
+
+    white-space:nowrap;
+
+    transition:.25s;
+}
+
+.nav-menu a:hover{
+    background:#eee4d5;
+    color:#4b3d2f;
+}
+
+
+/* KONTEN */
+
+.container{
+    width:88%;
+    max-width:950px;
+    margin:auto;
+}
+
+.section{
+    padding:75px 0;
+}
+
+
+/* HEADER */
+
+.hero{
+    background:
+    radial-gradient(
+        circle at 85% 20%,
+        rgba(154,116,71,.18),
+        transparent 32%
+    ),
+
+    linear-gradient(
+        135deg,
+        #fffaf2,
+        #eee5d8
+    );
+
+    padding:85px 0;
+}
+
+.eyebrow{
+    color:#987346;
+
+    font-size:12px;
+    font-weight:bold;
+
+    letter-spacing:3px;
+}
+
+.number{
+    color:#b49a78;
+
+    font-size:80px;
+
+    font-weight:bold;
+
+    line-height:.9;
+
+    margin-top:20px;
+}
+
+h1{
+    color:#40352b;
+
+    font-size:
+    clamp(45px,8vw,78px);
+
+    line-height:1;
+
+    margin:12px 0;
+}
+
+.position{
+    color:#947047;
+    font-size:17px;
+}
+
+
+/* DATA */
+
+.data-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:15px;
+
+    margin-bottom:20px;
+}
+
+.data{
+    background:#eee4d5;
+
+    border:1px solid #d5c2a7;
+
+    border-radius:14px;
+
+    padding:20px;
+}
+
+.data small{
+    display:block;
+
+    color:#8a775f;
+
+    font-size:11px;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+    margin-bottom:5px;
+}
+
+.data strong{
+    color:#44382d;
+}
+
+
+/* CARD */
+
+.info-card{
+    background:#fffaf2;
+
+    border:1px solid #d8c9b5;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    margin-bottom:18px;
+
+    box-shadow:
+    0 5px 18px rgba(70,50,30,.07);
+
+    transition:.25s;
+}
+
+.info-card:hover{
+    transform:translateY(-3px);
+
+    border-color:#a98962;
+}
+
+.info-card h2{
+    color:#765836;
+
+    font-size:23px;
+
+    margin-bottom:10px;
+}
+
+.info-card p{
+    color:#70675e;
+}
+
+
+/* IDENTITAS */
+
+.identity{
+    margin-top:50px;
+
+    background:#4a3b2b;
+
+    color:#fffaf2;
+
+    border-radius:18px;
+
+    padding:25px;
+}
+
+.identity h3{
+    color:#d8bb91;
+
+    margin-bottom:10px;
+}
+
+.identity p{
+    color:#eee5d9;
+    font-size:14px;
+}
+
+
+/* NAVIGASI */
+
+.navigation{
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+    margin-top:40px;
+}
+
+.button{
+    display:inline-block;
+
+    background:#947047;
+
+    color:white;
+
+    padding:13px 20px;
+
+    border-radius:9px;
+
+    font-weight:bold;
+
+    transition:.25s;
+}
+
+.button:hover{
+    background:#765634;
+
+    transform:translateY(-3px);
+}
+
+
+/* FOOTER */
+
+footer{
+    background:#3d3126;
+
+    color:#fffaf2;
+
+    text-align:center;
+
+    padding:35px 20px;
+
+    margin-top:30px;
+}
+
+footer strong{
+    color:#d8bb91;
+}
+
+footer p{
+    color:#d8cec0;
+
+    font-size:13px;
+
+    margin-top:5px;
+}
+
+
+/* HP */
+
+@media(max-width:700px){
+
+    .navbar{
+        flex-direction:column;
+
+        padding:13px 4%;
+
+        gap:10px;
+    }
+
+    .nav-menu{
+        width:100%;
+    }
+
+    .container{
+        width:90%;
+    }
+
+    .section{
+        padding:60px 0;
+    }
+
+    .data-grid{
+        grid-template-columns:1fr;
+    }
+
+    .navigation{
+        flex-direction:column;
+    }
+
+    .button{
+        text-align:center;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+<a href="index.html" class="logo">
+SEJARAH<span>.</span>
+</a>
+
+<nav class="nav-menu">
+
+<a href="index.html">
+Beranda
+</a>
+
+<a href="index.html#g30s">
+G30S/PKI
+</a>
+
+<a href="tokoh.html">
+Tokoh
+</a>
+
+<a href="kronologi.html">
+Kronologi
+</a>
+
+<a href="dampak.html">
+Dampak
+</a>
+
+</nav>
+
+</header>
+
+
+<!-- HEADER TOKOH -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="eyebrow">
+TOKOH 02 • 6 JENDERAL & 1 PERWIRA
+</div>
+
+<div class="number">
+02
+</div>
+
+<h1>
+R. Suprapto
+</h1>
+
+<div class="position">
+Letnan Jenderal TNI • Deputi II Menteri/Panglima Angkatan Darat
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ISI -->
+
+<main>
+
+<div class="container">
+
+<div class="section">
+
+
+<!-- DATA SINGKAT -->
+
+<div class="data-grid">
+
+<div class="data">
+
+<small>
+NAMA
+</small>
+
+<strong>
+R. Suprapto
+</strong>
+
+</div>
+
+
+<div class="data">
+
+<small>
+PANGKAT
+</small>
+
+<strong>
+Letnan Jenderal TNI
+</strong>
+
+</div>
+
+
+<div class="data">
+
+<small>
+JABATAN
+</small>
+
+<strong>
+Deputi II Menteri/Panglima Angkatan Darat
+</strong>
+
+</div>
+
+
+<div class="data">
+
+<small>
+STATUS
+</small>
+
+<strong>
+Pahlawan Revolusi
+</strong>
+
+</div>
+
+</div>
+
+
+<!-- PROFIL -->
+
+<div class="info-card">
+
+<h2>
+Profil
+</h2>
+
+<p>
+
+R. Suprapto merupakan salah satu perwira
+tinggi Angkatan Darat. Ia memiliki pengalaman
+dalam perjuangan kemerdekaan serta berbagai
+tugas militer setelah Indonesia merdeka.
+
+</p>
+
+</div>
+
+
+<!-- PERAN -->
+
+<div class="info-card">
+
+<h2>
+Peran dan Jabatan
+</h2>
+
+<p>
+
+Pada masa Demokrasi Terpimpin, R. Suprapto
+menjabat sebagai Deputi II Menteri/Panglima
+Angkatan Darat. Jabatan tersebut menempatkannya
+dalam struktur penting kepemimpinan Angkatan Darat.
+
+</p>
+
+</div>
+
+
+<!-- G30S -->
+
+<div class="info-card">
+
+<h2>
+Dalam Peristiwa G30S
+</h2>
+
+<p>
+
+R. Suprapto menjadi salah satu perwira tinggi
+Angkatan Darat yang menjadi korban dalam
+rangkaian peristiwa G30S pada 1 Oktober 1965.
+
+</p>
+
+<p>
+
+Ia kemudian ditetapkan sebagai salah satu
+Pahlawan Revolusi.
+
+</p>
+
+</div>
+
+
+<!-- CATATAN -->
+
+<div class="info-card">
+
+<h2>
+Catatan Sejarah
+</h2>
+
+<p>
+
+Peristiwa G30S merupakan peristiwa sejarah
+yang memiliki berbagai penafsiran. Informasi
+mengenai peristiwa tersebut sebaiknya dipelajari
+dengan membandingkan sumber sejarah yang kredibel.
+
+</p>
+
+</div>
+
+
+<!-- IDENTITAS -->
+
+<div class="identity">
+
+<h3>
+Identitas Pembuat
+</h3>
+
+<p>
+Nama: Amalia Nur Azizah
+</p>
+
+<p>
+Kelas: X RPL 2
+</p>
+
+<p>
+No. Absen: 03
+</p>
+
+</div>
+
+
+<!-- NAVIGASI -->
+
+<div class="navigation">
+
+<a href="ahmad-yani.html" class="button">
+← Ahmad Yani
+</a>
+
+<a href="mt-haryono.html" class="button">
+M.T. Haryono →
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</main>
+
+
+
+</body>
+
+</html>
