@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>G30S/PKI | Tentang Peristiwa</title>
+
+<style>
+
+/* =========================
+   DASAR
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f0e8;
+    color:#3d342b;
+    line-height:1.7;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:88%;
+    max-width:1100px;
+    margin:auto;
+}
+
+section{
+    padding:80px 0;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    background:#fffaf2;
+
+    border-bottom:1px solid #d8cbb9;
+
+    box-shadow:
+    0 4px 15px rgba(60,45,30,.08);
+
+    padding:15px 6%;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:20px;
+}
+
+.logo{
+    font-size:21px;
+    font-weight:bold;
+    letter-spacing:2px;
+
+    color:#4a3b2b;
+
+    white-space:nowrap;
+}
+
+.logo span{
+    color:#9a7447;
+}
+
+.nav-menu{
+    display:flex;
+    gap:5px;
+
+    overflow-x:auto;
+}
+
+.nav-menu a{
+    color:#766b5e;
+
+    font-size:14px;
+
+    padding:9px 13px;
+
+    border-radius:8px;
+
+    white-space:nowrap;
+
+    transition:.25s;
+}
+
+.nav-menu a:hover{
+    background:#eee4d5;
+    color:#4b3d2f;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.page-header{
+    background:
+    radial-gradient(
+        circle at 85% 25%,
+        rgba(154,116,71,.16),
+        transparent 32%
+    ),
+
+    linear-gradient(
+        135deg,
+        #fffaf2,
+        #eee5d8
+    );
+
+    padding:100px 0 80px;
+}
+
+.label{
+    display:inline-block;
+
+    color:#80613d;
+
+    background:#fffaf2;
+
+    border:1px solid #cdbda8;
+
+    border-radius:30px;
+
+    padding:8px 16px;
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+    margin-bottom:20px;
+}
+
+.page-title{
+    font-size:
+    clamp(48px,9vw,90px);
+
+    line-height:1;
+
+    color:#3c332b;
+
+    margin-bottom:20px;
+}
+
+.page-title span{
+    color:#9a7447;
+}
+
+.page-description{
+    max-width:720px;
+
+    color:#6e665d;
+
+    font-size:17px;
+}
+
+
+/* =========================
+   KARTU
+========================= */
+
+.content-card{
+    background:#fffaf2;
+
+    border:1px solid #d9cbb8;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    margin-bottom:20px;
+
+    box-shadow:
+    0 6px 20px rgba(70,50,30,.06);
+}
+
+.content-card h2{
+    color:#4a3b2b;
+
+    margin-bottom:14px;
+
+    font-size:28px;
+}
+
+.content-card h3{
+    color:#947047;
+
+    margin-bottom:10px;
+}
+
+.content-card p{
+    color:#70675e;
+
+    margin-bottom:14px;
+}
+
+.content-card p:last-child{
+    margin-bottom:0;
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.info-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:20px;
+
+    margin-top:30px;
+}
+
+.info-card{
+    background:#fffaf2;
+
+    border:1px solid #d9cbb8;
+
+    border-radius:17px;
+
+    padding:25px;
+
+    box-shadow:
+    0 5px 18px rgba(70,50,30,.06);
+
+    transition:.25s;
+}
+
+.info-card:hover{
+    transform:translateY(-5px);
+
+    border-color:#b79a73;
+}
+
+.info-number{
+    color:#b49a78;
+
+    font-size:36px;
+
+    font-weight:bold;
+
+    margin-bottom:5px;
+}
+
+.info-card h3{
+    color:#483b2e;
+
+    margin-bottom:9px;
+}
+
+.info-card p{
+    color:#776e64;
+
+    font-size:14px;
+}
+
+
+/* =========================
+   NAVIGASI BAWAH
+========================= */
+
+.page-navigation{
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+    margin-top:40px;
+}
+
+.nav-button{
+    display:inline-block;
+
+    background:#947047;
+
+    color:white;
+
+    padding:13px 20px;
+
+    border-radius:9px;
+
+    font-weight:bold;
+
+    transition:.25s;
+}
+
+.nav-button:hover{
+    background:#765634;
+
+    transform:translateY(-2px);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#e9dfd0;
+
+    border-top:1px solid #d4c3ad;
+
+    text-align:center;
+
+    padding:45px 20px;
+}
+
+footer h3{
+    color:#4a3b2b;
+
+    letter-spacing:2px;
+
+    margin-bottom:8px;
+}
+
+footer h3 span{
+    color:#9a7447;
+}
+
+footer p{
+    color:#786d61;
+
+    font-size:13px;
+}
+
+
+/* =========================
+   HP
+========================= */
+
+@media(max-width:800px){
+
+    .navbar{
+        flex-direction:column;
+
+        padding:13px 4%;
+
+        gap:10px;
+    }
+
+    .nav-menu{
+        width:100%;
+    }
+
+    .container{
+        width:90%;
+    }
+
+    section{
+        padding:65px 0;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+    .page-header{
+        padding:75px 0 60px;
+    }
+
+    .page-description{
+        font-size:16px;
+    }
+
+    .page-navigation{
+        flex-direction:column;
+    }
+
+    .nav-button{
+        text-align:center;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header class="navbar">
+
+<a href="index.html" class="logo">
+SEJARAH<span>.</span>
+</a>
+
+<nav class="nav-menu">
+
+<a href="index.html">
+Beranda
+</a>
+
+<a href="g30s.html">
+G30S/PKI
+</a>
+
+<a href="tokoh.html">
+Tokoh
+</a>
+
+<a href="kronologi.html">
+Kronologi
+</a>
+
+<a href="dampak.html">
+Dampak
+</a>
+
+</nav>
+
+</header>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<section class="page-header">
+
+<div class="container">
+
+<div class="label">
+01 — TENTANG PERISTIWA
+</div>
+
+<h1 class="page-title">
+G30S<span>/</span>PKI
+</h1>
+
+<p class="page-description">
+
+Gerakan 30 September atau G30S merupakan
+salah satu peristiwa penting dalam sejarah
+Indonesia yang terjadi pada akhir September
+hingga awal Oktober 1965.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     ISI UTAMA
+========================= -->
+
+<section>
+
+<div class="container">
+
+
+<!-- PENGERTIAN -->
+
+<div class="content-card">
+
+<h2>
+Apa itu G30S?
+</h2>
+
+<p>
+
+Gerakan 30 September atau G30S adalah istilah
+yang digunakan untuk menyebut gerakan yang
+berlangsung pada malam 30 September hingga
+1 Oktober 1965.
+
+</p>
+
+<p>
+
+Dalam rangkaian peristiwa tersebut, sejumlah
+perwira Angkatan Darat menjadi korban penculikan
+dan pembunuhan.
+
+</p>
+
+<p>
+
+Peristiwa tersebut kemudian diikuti oleh
+perubahan besar dalam kehidupan politik,
+sosial, dan pemerintahan Indonesia.
+
+</p>
+
+</div>
+
+
+<!-- CATATAN -->
+
+<div class="content-card">
+
+<h2>
+Catatan Sejarah
+</h2>
+
+<p>
+
+Peristiwa G30S memiliki berbagai penafsiran
+dalam historiografi Indonesia. Istilah dan
+penjelasan mengenai peristiwa tersebut juga
+dapat berbeda tergantung sumber sejarah yang
+digunakan.
+
+</p>
+
+<p>
+
+Oleh karena itu, pembelajaran mengenai G30S
+sebaiknya dilakukan dengan membandingkan
+berbagai sumber dan memahami konteks sejarah
+pada masa tersebut.
+
+</p>
+
+</div>
+
+
+<!-- LATAR BELAKANG -->
+
+<div class="content-card">
+
+<h2>
+Latar Belakang
+</h2>
+
+<p>
+
+Indonesia pada awal dekade 1960-an berada dalam
+situasi politik yang penuh ketegangan. Masa
+Demokrasi Terpimpin ditandai dengan persaingan
+pengaruh antara berbagai kelompok politik dan
+kekuatan sosial.
+
+</p>
+
+</div>
+
+
+<!-- TIGA FAKTOR -->
+
+<div class="info-grid">
+
+
+<div class="info-card">
+
+<div class="info-number">
+01
+</div>
+
+<h3>
+Ketegangan Politik
+</h3>
+
+<p>
+
+Persaingan antara kelompok politik dan kekuatan
+negara semakin kuat pada masa Demokrasi Terpimpin.
+
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<div class="info-number">
+02
+</div>
+
+<h3>
+Konflik Ideologi
+</h3>
+
+<p>
+
+Perbedaan pandangan mengenai ideologi dan arah
+politik Indonesia menimbulkan ketegangan
+antarkelompok.
+
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<div class="info-number">
+03
+</div>
+
+<h3>
+Kondisi Ekonomi
+</h3>
+
+<p>
+
+Indonesia juga menghadapi berbagai persoalan
+ekonomi dan sosial yang memengaruhi kehidupan
+masyarakat.
+
+</p>
+
+</div>
+
+
+</div>
+
+
+<!-- PERUBAHAN -->
+
+<div class="content-card" style="margin-top:20px;">
+
+<h2>
+Mengapa Peristiwa Ini Penting Dipelajari?
+</h2>
+
+<p>
+
+G30S menjadi salah satu titik penting dalam
+sejarah Indonesia karena setelah peristiwa
+tersebut terjadi perubahan besar dalam bidang
+politik dan pemerintahan.
+
+</p>
+
+<p>
+
+Mempelajari peristiwa ini membantu kita memahami
+bagaimana konflik politik, militer, dan sosial
+dapat memengaruhi perjalanan suatu negara.
+
+</p>
+
+</div>
+
+
+<!-- NAVIGASI -->
+
+<div class="page-navigation">
+
+<a href="index.html" class="nav-button">
+← Kembali ke Beranda
+</a>
+
+<a href="tokoh.html" class="nav-button">
+Lanjut ke Tokoh →
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<h3>
+G30S<span>/</span>PKI
+</h3>
+
+<p>
+Website pembelajaran Sejarah Indonesia
+</p>
+
+  
+
+<p>
+Amalia Nur Azizah • X RPL 2 • 03
+</p>
+
+</footer>
+
+
+</body>
+</html>
